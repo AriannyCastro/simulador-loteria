@@ -15,9 +15,9 @@ numSort.push(sort);
 function addToList(num, pos) {
 if (num.length == 2) {
 if (numEsco.includes(num)) {
-alert("Numero Escolhido Anteriormente!! Digite outro numero!")
+alert2("Erro", "Numero Escolhido Anteriormente!! Digite outro numero!")
 }else if(parseInt(num) > 60){
-alert("O numero digitado não pode ser maior que 60");
+alert2("Erro", "O numero digitado não pode ser maior que 60");
  }else{
 numEsco[pos -1] = num;
 }
@@ -28,7 +28,7 @@ function verificarAcertos() {
 sortearNumeros();
 let cont = 0;
 if (numEsco.length != 6) {
-alert("A quantidade de numeros escolhidos está incorreto!\n Digite 6 numeros de 01 à 60 com duas casas decimais");
+alert2("Erro", "A quantidade de numeros escolhidos está incorreto!\n Digite 6 numeros de 01 à 60 com duas casas decimais");
 }else {
 for (var i = 0; i < 6; i++) {
 if (numSort.includes(parseInt(numEsco[i]))) {
@@ -48,4 +48,35 @@ li.append(numSort[i]);
 li.classList.add("result");
 document.getElementById('NumSort').append(li);
 }
+}
+
+
+function alert2(title, text){
+  let timerInterval
+  Swal.fire({
+    title: title,
+    html: text,
+    timer: 5000,
+    timerProgressBar: true,
+    willOpen: () => {
+      Swal.showLoading()
+      timerInterval = setInterval(() => {
+        const content = Swal.getContent()
+        if (content) {
+          const b = content.querySelector('b')
+          if (b) {
+            b.textContent = Swal.getTimerLeft()
+          }
+        }
+      }, 1000)
+    },
+    onClose: () => {
+      clearInterval(timerInterval)
+    }
+  }).then((result) => {
+    /* Read more about handling dismissals below */
+    if (result.dismiss === Swal.DismissReason.timer) {
+      console.log('O alerta foi fechado.')
+    }
+  })
 }
