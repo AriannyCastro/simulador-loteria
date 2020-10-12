@@ -60,12 +60,12 @@ numEsco[pos -1] = num;
 ## Exemplo em tabela
 Número digitado  | Número Sorteado|
 -----------------| ---------------
-     2           |      43      
-     5           |      28           
-     30          |      59           
-     25          |      10
-     10          |      26
-     11          |      56
+     2           |      43       |
+     5           |      28       |    
+     30          |      59       |   
+     25          |      10       |  
+     10          |      26       |
+     11          |      56       |
 
 #### referencias:
 * HTML: [Wikipédia](https://pt.wikipedia.org/wiki/HTML)
