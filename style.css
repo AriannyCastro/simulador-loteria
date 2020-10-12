@@ -1,3 +1,6 @@
+body{
+  background: LightCoral;
+}
 .container{
     display: flex;
     flex-direction: column;
@@ -16,17 +19,17 @@
     h1{
     font-size: 3em;
     font-family: fantasy;
-    color: palevioletred;
+    color: IndianRed;
     }
     p{
       font-size:  2em;
-      color:  palevioletred;
+      color:  IndianRed;
 
     }
 
     button{
     font-size: 2em;
-    background-color: palevioletred;
+    background-color: IndianRed;
     border: 0px;
     color: white;
     elevation: 20px;
