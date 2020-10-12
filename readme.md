@@ -67,6 +67,8 @@ Número digitado  | Número Sorteado|
      10          |      26       |
      11          |      56       |
 
+
+
 #### referencias:
 * HTML: [Wikipédia](https://pt.wikipedia.org/wiki/HTML)
 * CSS: [Wikipédia](https://pt.wikipedia.org/wiki/Cascading_Style_Sheets)
