@@ -15,7 +15,7 @@ numSort.push(sort);
 function addToList(num, pos) {
 if (num.length == 2) {
 if (numEsco.includes(num)) {
-alert2("Erro", "Numero Escolhido Anteriormente!! Digite outro numero!")
+alert2(" Erro ", "Numero Escolhido Anteriormente!! Digite outro numero!")
 }else if(parseInt(num) > 60){
 alert2("Erro", "O numero digitado não pode ser maior que 60");
  }else{
@@ -76,7 +76,7 @@ function alert2(title, text){
   }).then((result) => {
     /* Read more about handling dismissals below */
     if (result.dismiss === Swal.DismissReason.timer) {
-      console.log('O alerta foi fechado.')
+      console.log('O alerta foi fechado')
     }
   })
 }
